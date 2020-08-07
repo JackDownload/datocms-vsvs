@@ -24,6 +24,8 @@
                         post.title
                       }}</nuxt-link>
                     </h1>
+                                        <h1 class="category">
+                    </h1>
                     <div v-html="post.excerpt" />
                   </div>
                 </div>
