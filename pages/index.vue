@@ -24,7 +24,12 @@
                         post.title
                       }}</nuxt-link>
                     </h1>
-                                        <h1 class="category">
+                                    <div v-html="post.content" />
+              </div>
+
+                                        <h1 class="author">
+                    </h1>
+                                                            <h1 class="category">
                     </h1>
                     <div v-html="post.excerpt" />
                   </div>
@@ -129,6 +134,7 @@ export default {
             id
             title
             slug
+            category
             publicationDate: _firstPublishedAt
             excerpt
             coverImage {
