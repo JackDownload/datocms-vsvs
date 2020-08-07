@@ -5,7 +5,7 @@
         <div class="container">
           <div v-for="post in posts.slice(0, 2)" v-bind:key="post.slug">
             <div class="columns">
-              <div class="column is-8 is-offset-4">
+              <div class="column is-8 is-offset-2">
                 <figure class="image">
                   <datocms-image :data="post.coverImage.responsiveImage" />
                 </figure>
@@ -24,14 +24,7 @@
                         post.title
                       }}</nuxt-link>
                     </h1>
-                                    <div v-html="post.content" />
-              </div>
-
-                                        <h1 class="author">s sads {{post.author}}
-                    </h1>
-                                                            <h1 class="category">{{ category.name }}
-                    </h1>
-                    <div v-html="post.excerpt" />
+                    <div v-html="post.author" />
                   </div>
                 </div>
               </div>
@@ -134,7 +127,7 @@ export default {
             id
             title
             slug
-            category
+            author
             publicationDate: _firstPublishedAt
             excerpt
             coverImage {
@@ -148,11 +141,6 @@ export default {
                 responsiveImage(imgixParams: { fit: crop, ar: "1:1", w: 40 }) {
                   ...imageFields
                 }
-              }
-            }
-            
-                        category {
-              name
               }
             }
           }
