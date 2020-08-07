@@ -29,7 +29,7 @@
 
                                         <h1 class="author">s sads {{post.author}}
                     </h1>
-                                                            <h1 class="category">{{ post.category }}
+                                                            <h1 class="category">{{ category.name }}
                     </h1>
                     <div v-html="post.excerpt" />
                   </div>
@@ -148,6 +148,11 @@ export default {
                 responsiveImage(imgixParams: { fit: crop, ar: "1:1", w: 40 }) {
                   ...imageFields
                 }
+              }
+            }
+            
+                        category {
+              name
               }
             }
           }
