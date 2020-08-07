@@ -15,7 +15,10 @@
             <div class="column is-8 is-offset-2">
               <div class="content is-medium">
                 <h2 class="subtitle is-4">
-                  {{ formatDate(post.publicationDate) }}
+                  {{ formatDate(post.excerpt) }}
+                </h2>
+                                <h2 class="subtitle is-2">
+                  {{ post.excerpt }}
                 </h2>
                 <h1 class="title">
                   <nuxt-link :to="`/posts/${post.slug}`">{{
@@ -56,6 +59,7 @@ export default {
             id
             title
             slug
+            excerpt
             publicationDate: _firstPublishedAt
             content
             coverImage {
