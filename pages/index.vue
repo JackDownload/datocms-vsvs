@@ -5,7 +5,7 @@
         <div class="container">
           <div v-for="post in posts.slice(0, 2)" v-bind:key="post.slug">
             <div class="columns">
-              <div class="column is-8 is-offset-2">
+              <div class="column is-8 is-offset-4">
                 <figure class="image">
                   <datocms-image :data="post.coverImage.responsiveImage" />
                 </figure>
@@ -27,9 +27,9 @@
                                     <div v-html="post.content" />
               </div>
 
-                                        <h1 class="author">
+                                        <h1 class="author">{{post.author}}
                     </h1>
-                                                            <h1 class="category">
+                                                            <h1 class="category">{{post.category}}
                     </h1>
                     <div v-html="post.excerpt" />
                   </div>
