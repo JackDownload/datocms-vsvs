@@ -3,7 +3,7 @@
     <section class="hero">
       <div class="hero-body">
         <div class="container">
-          <div v-for="post in posts.slice(0, 2)" v-bind:key="post.slug">
+          <div v-for="post in posts.slice(0, 5)" v-bind:key="post.slug">
             <div class="columns">
               <div class="column is-8 is-offset-2">
                 <figure class="image">
@@ -20,11 +20,14 @@
                       {{ formatDate(post.publicationDate) }}
                     </h2>
                     <h1 class="title">
+                    {{
+                        post.title
+                      }}
                       <nuxt-link :to="`/posts/${post.slug}`">{{
                         post.title
                       }}</nuxt-link>
                     </h1>
-                    <div v-html="author.name" />
+                    <div v-html="post.excerpt" />
                   </div>
                 </div>
               </div>
