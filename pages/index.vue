@@ -130,7 +130,6 @@ export default {
             id
             title
             slug
-            author
             publicationDate: _firstPublishedAt
             excerpt
             coverImage {
