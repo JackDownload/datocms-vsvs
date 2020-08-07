@@ -27,7 +27,7 @@
                                     <div v-html="post.content" />
               </div>
 
-                                        <h1 class="author">{{post.author}}
+                                        <h1 class="author">s sads {{post.author}}
                     </h1>
                                                             <h1 class="category">{{post.category}}
                     </h1>
